@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+
+/* Global Styles */
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+  }
+  
+  h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+  }
+  
+  h4 {
+    font-size: 20px;
+    color: #222;
+  }
+  
+  h6 {
+    font-weight: 700;
+    font-size: 12px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+  }
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+  
+
+li{
+    list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+/* Navbar */
+
+nav,
+.nav-links {
+  display: flex;
+  margin: 0;
+}
+
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px 20px 80px;
+  background: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 99;
+  position:sticky;
+  top: 0;
+  left: 0;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links li{
+  padding: 0 20px;
+  position: relative;
+}
+
+.nav-links li a{
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+.nav-links li a.active::after{
+  position: absolute;
+  content: '';
+  color: #088178;
+  background-color: #088178;
+  height: 3px;
+  width: 30%;
+  left: 20px;
+  transition: 0.3s;
+  bottom: -4px;
+}
+
+.nav-links li a::after{
+  position: absolute;
+  content: '';
+  background-color: #088178;
+  height: 3px;
+  width:0;
+  left: 20px;
+  transition: 0.3s;
+  bottom: -4px;
+}
+
+.nav-links li a:hover::after{
+  width: 30%;
+}
+
+.nav-links li a:hover, .nav-links li a.active{
+  color: #088178;
+}
+
+/* Hero Section */
+.hero-banner{
+  background-image: url(img/hero4.png);
+  height: 90vh;
+  width: 100%;
+  padding: 0 80px;
+  background-size: cover;
+  background-position: top 25% right 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero-banner h4{
+  padding-bottom: 15px;
+}
+
+.hero-banner h1{
+  color: #088178;
+}
+
+.hero-banner button{
+  background-image: url(img/button.png);
+  background-color: transparent;
+  color: #088178;
+  padding: 14px 80px 14px 65px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+/* Feature Box */
+#feature-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#feature-box .fe-box{
+  border: 1px solid #cce7d0;
+  padding: 25px 15px;
+  border-radius: 4px;
+  box-shadow: 20px,20px, 34px rgba(200, 13, 13, 0.03);
+  width: 175px;
+  margin: 15px 0;
+  text-align: center;
+  
+}
+
+#feature-box .fe-box:hover{
+  box-shadow: 10px,10px, 54px, rgba(70, 62,22, 0.1);
+}
+
+.fe-box img{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#feature-box .fe-box h6{
+  padding: 9px 8px 6px 8px;
+  background-color: #fddde4;
+  line-height: 1;
+  display: inline-block;
+  border-radius: 6px;
+  color: #088178;
+}
+
+#feature-box .fe-box:nth-child(2) h6{
+  background-color: #cdebbc;
+}
+#feature-box .fe-box:nth-child(3) h6{
+  background-color: #d1e862;
+}
+#feature-box .fe-box:nth-child(4) h6{
+  background-color: #cdd4f8;
+}
+#feature-box .fe-box:nth-child(5) h6{
+  background-color: #f6dbf6;
+}
+#feature-box .fe-box:nth-child(6) h6{
+  background-color: #fff2e5;
+}
+
+/* Feature Product */
+#feature-product{
+  text-align: center;
+}
+
+#feature-product .product{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#feature-product .fe-product{
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  box-shadow: 20px,20px, 30px #646464;
+  width: 23%;
+  min-width: 250px;
+  transition: 0.2s ease;
+  padding: 10px 12px;
+  margin: 15px 0;
+  position: relative;
+}
+
+#feature-product .fe-product .des{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: start;
+}
+
+#feature-product .fe-product:hover{
+  box-shadow: 20px,20px, 30px rgba(0, 0, 0, 0.02);
+}
+#feature-product .fe-product img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.fa-star{
+  color: rgb(243, 181, 25);
+}
+
+#feature-product .fe-product h5{
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+#feature-product .fe-product h4{
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#feature-product .fe-product p{
+  margin: 0;
+  font-size: 12px;
+}
+
+#feature-product .fe-product .fa-cart-shopping{
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  line-height: 40px;
+  background-color: #e8f6ea;
+  color: #088178;
+  border: 1px solid #cce7d0;
+}
+
+/* Iklan Banner */
+#iklan-banner{
+  text-align: center;
+  background-image: url(/Cara-E-Commerce/img/banner/b2.jpg);
+  height: 40vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#iklan-banner h2{
+  color: white;
+  font-size: 30px;
+}
+
+#iklan-banner h2 span{
+  color: #ef3636;
+}
+
+#iklan-banner h4{
+  color: white;
+  font-size: 16px;
+}
+button {
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: 0. 2s;
+}
+
+#iklan-banner button:hover{
+  background-color: #088178;
+  color: white;
+}
+
+/* news banner */
+
+#news-banner{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#news-banner .first-banner{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#news-banner .banner-promotion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(img/banner/b17.jpg);
+  background-size: auto;
+  color: white;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  padding: 30px;
+  flex: 1;
+}
+
+#news-banner .first-banner .banner-promotion2{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(img/banner/b10.jpg);
+  background-size:auto;
+  color: white;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  padding: 30px;
+}
+
+#news-banner .first-banner .banner-promotion h4, #news-banner .first-banner .banner-promotion2 h4{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#news-banner .banner-promotion h2, #news-banner .first-banner .banner-promotion2 h2{
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+#news-banner .first-banner .banner-promotion span, #news-banner .first-banner .banner-promotion2 span{
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+#news-banner .first-banner .banner-promotion .light, #news-banner .first-banner .banner-promotion2 .light{
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid white;
+  padding: 11px 18px;
+  background-color: transparent;
+  color: white;
+}
+
+#news-banner .first-banner .banner-promotion:hover .light, #news-banner .first-banner .banner-promotion2:hover .light{
+  background-color: #088178;
+  border: none;
+}
+
+#news-banner .sec-banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#news-banner .sec-banner .banner-promotion{
+  padding: 20px;
+  height: 30vh;
+  margin-bottom: 20px;
+  min-width: 30%;
+}
+
+#news-banner .sec-banner .banner-promotion h2{
+  color: white;
+  font-weight: 900;
+  font-size: 22px;
+  min-width: 30%;
+
+}
+
+#news-banner .sec-banner .banner-promotion h3{
+  color: #ec544e;
+  font-weight: 800;
+  font-size: 15px;
+  flex: 0;
+}
+
+#news-banner .sec-banner .banner-promotion{
+  background-image: url(img/banner/b7.jpg);
+}
+
+#news-banner .sec-banner .banner-promotion.bp2{
+  background-image: url(img/banner/b4.jpg);
+}
+
+#news-banner .sec-banner .banner-promotion.bp3{
+  background-image: url(img/banner/b18.jpg);
+}
+
+/* banner signup */
+#banner-signup{
+  display: flex;
+  flex-direction: row;
+  background-position: 20% 30%;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(img/banner/b14.png);
+  background-color: #041e42;
+}
+
+#banner-signup .subtitle-signup h3{
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#banner-signup .subtitle-signup p{
+  color: #818ea0;
+  font-size: 14px;
+  font-weight: 600;
+}
+#banner-signup .subtitle-signup span{
+  color: darkgoldenrod;
+  font-weight: 600;
+}
+
+#banner-signup .input-email{
+  display: flex;
+  width: 40%;
+}
+
+
+
+#banner-signup .input-email input{
+  color: #646464;
+  padding: 0 1.25rem;
+  height: 3.125rem;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#banner-signup .input-email button.btn-signup{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color:#088178 ;
+  color: white;
+  height: 50px;
+  white-space:nowrap;
+}
+
+/* footer */
+footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo{
+  margin-bottom: 30px;
+}
+
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p{
+  font-size: 13px;
+  padding: 0 0 8px 0;
+  margin: 0;
+}
+
+footer a{
+  font-size: 13px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .social-media{
+  margin-top: 20px;
+}
+
+footer .social-media i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .installer .row img{
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .installer img{
+  margin : 10px 0 15px 0px;
+}
+
+footer .social-media i:hover, footer a:hover{
+  color: #088178;
+}
+
+footer .copyright{
+  text-align: center;
+  width: 100%;
+}
